@@ -1,8 +1,18 @@
+import { Provider, useSelector } from 'react-redux';
+
+import store from './store';
+
+import Catalog from './components/Catalog';
+
 function App() {
+  const catalog = useSelector(state => state);
+
+  console.log(catalog);
+
   return (
-    <div className="App">
-      hello world
-    </div>
+    <Provider store={store}>
+      <Catalog />
+    </Provider>
   );
 }
 
