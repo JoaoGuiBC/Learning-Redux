@@ -2,6 +2,7 @@ import { Flex, Heading, Image, Text, Button } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 import api from "../services/api";
+import { formatter } from '../utils/formatter';
 
 import { IProduct } from "../store/modules/cart/types";
 
@@ -36,7 +37,7 @@ const Catalog: React.FC = () => {
 
             <Flex py="6" w="100%" justify="space-between">
               <Text as="strong" fontSize="22">{product.title}</Text>
-              <Text as="span" fontSize="22">{product.price}</Text>
+              <Text as="span" fontSize="22" color="purple.500">{formatter.format(product.price)}</Text>
             </Flex>
 
             <Button colorScheme="purple" size="lg">Comprar</Button>
