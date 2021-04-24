@@ -23,7 +23,7 @@ const Catalog: React.FC = () => {
   }, []);
 
   return (
-    <Flex flexDirection="column" align="center" justify="center" flex="3">
+    <Flex flexDirection="column" align="center" flex="3">
       <Heading fontSize="4xl" py="5">Catalog</Heading>
 
       <Flex flexWrap="wrap" align="center" justify="center" px="5" >
@@ -50,7 +50,7 @@ const Catalog: React.FC = () => {
 
             <Flex py="6" w="100%" justify="space-between">
               <Text as="strong" fontSize="22">{product.title}</Text>
-              <Text as="span" fontSize="22" color="purple.500">
+              <Text as="span" fontSize="22" color="purple.500" userSelect="none">
                 {formatter.format(product.price)}
               </Text>
             </Flex>
