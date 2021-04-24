@@ -1,5 +1,7 @@
+import { Flex } from '@chakra-ui/react';
 import { useSelector } from 'react-redux';
 
+import { Cart } from './components/Cart';
 import Catalog from './components/Catalog';
 
 function App() {
@@ -8,7 +10,10 @@ function App() {
   console.log(catalog);
 
   return (
-    <Catalog />
+    <Flex>
+      <Cart />
+      <Catalog />
+    </Flex>
   );
 }
 
