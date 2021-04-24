@@ -3,22 +3,26 @@
     {
       "id": 1,
       "title": "Moletom Branco",
-      "price": 290.00
+      "price": 290.00,
+      "photo": "https://img.ltwebstatic.com/images3_pi/2020/11/04/1604479759021648a542e2c08095b51af61a917494_thumbnail_600x.webp"
     },
     {
       "id": 2,
       "title": "Pelucia fofa",
-      "price": 20.90
+      "price": 20.90,
+      "photo": "https://http2.mlstatic.com/D_NQ_NP_713297-CBT41088991749_032020-O.webp"
     },
     {
       "id": 3,
-      "title": "Luminária LED",
-      "price": 500.00
+      "title": "Luminária",
+      "price": 500.00,
+      "photo": "https://i.ebayimg.com/images/g/Iq8AAOSwSkpd5xXE/s-l300.jpg"
     },
     {
       "id": 4,
       "title": "Livro",
-      "price": 59.90
+      "price": 59.90,
+      "photo": "https://images-na.ssl-images-amazon.com/images/I/410h6AWXjYL.jpg"
     }
   ],
   "stock": [

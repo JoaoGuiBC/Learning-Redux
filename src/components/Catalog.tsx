@@ -1,3 +1,4 @@
+import { Flex, Heading, Image, Text, Button } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 import api from "../services/api";
@@ -14,18 +15,35 @@ const Catalog: React.FC = () => {
   }, []);
 
   return (
-    <main>
-      <h1>Catalog</h1>
+    <Flex flexDirection="column" align="center" justify="center">
+      <Heading fontSize="4xl" py="5">Catalog</Heading>
 
-      {catalog.map(product => (
-        <article key={product.id}>
-          <strong>{product.title}</strong> {" - "}
-          <span>{product.price}</span> {"  "}
+      <Flex flexWrap="wrap" align="center" justify="center" px="10" >
+        {catalog.map(product => (
+          <Flex
+            as="article"
+            key={product.id}
+            flexDir="column"
+            align="center"
+            bg="gray.700"
+            px="20"
+            py="5"
+            mx="12"
+            my="6"
+            borderRadius="10"
+          >
+            <Image src={product.photo} alt="productImage" boxSize="18rem" objectFit="cover" borderRadius="10" />
 
-          <button type="button">Comprar</button>
-        </article>
-      ))}
-    </main>
+            <Flex py="6" w="100%" justify="space-between">
+              <Text as="strong" fontSize="22">{product.title}</Text>
+              <Text as="span" fontSize="22">{product.price}</Text>
+            </Flex>
+
+            <Button colorScheme="purple" size="lg">Comprar</Button>
+          </Flex>
+        ))}
+      </Flex>
+    </Flex>
   );
 }
 
